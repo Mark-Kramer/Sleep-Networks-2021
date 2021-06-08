@@ -3,7 +3,7 @@
 %
 % Mark Kramer, Jun 2021.
 
-clear                               % Clear the workspace.
+clear; clc                          % Clear the workspace.
 close all                           % Close all figures
 addpath('helper')                   % Add a folder with helpful functions.
 
@@ -35,7 +35,7 @@ simple_spectrogram(d(:,1),t);       % Make spectrogram for 1st electrode.
 figure(); pcolor(C); caxis([0,1]); colorbar 	% ... and visualize it.
 xlabel('Node number'); ylabel('Node number'); title('Coherence (9-16 Hz)')
 
-%% TRY AGAIN ...
+%% TRY AGAIN ... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Step 3. Filter & visualize spindle detections ---------------------------
 %
@@ -52,7 +52,7 @@ title('EEG data'); xlabel('Time [s]')
 figure(); pcolor(C); colorbar;      % ... and visualize it.
 xlabel('Node number'); ylabel('Node number'); title('Coincidence')
 
-%% TRY AGAIN ...
+%% TRY AGAIN ... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Step 4. Network inference ----------------------------------------------
 %

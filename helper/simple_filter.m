@@ -1,5 +1,5 @@
 % Apply a finite impulse response filter to the data d, with time axis t,
-% and passband Wn = [low freq, high freq].
+% and passband Wn = [low freq in Hz, high freq in Hz].
 
 function [d_filtered] = simple_filter(t,d,Wn)
 

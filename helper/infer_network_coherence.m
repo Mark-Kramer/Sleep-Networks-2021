@@ -2,9 +2,10 @@ function [C] = infer_network_coherence(t,d,detections)
 
     any_events = sum(detections,2)>=10;                     % When 10 or more electrodes detect a spindle,
     spindle_group_onset = find(diff(any_events)==1);        % ... define as the start of a "spindle trial".
+    
     n_spindles = length(spindle_group_onset);
-    K = size(d,2);
-    Fs = 1/(t(2)-t(1));
+    K          = size(d,2);
+    Fs         = 1/(t(2)-t(1));
 
     d_at_spindles = cell(K,1);                              % For each electrode,
     for k=1:K
@@ -30,6 +31,8 @@ end
 
 
 %% Functions.
+%  This uses a by-hand function to compute cohernece. It'd be better to use the multitaper
+%  method in Chronux, http://chronux.org/ .
 
 function [f,C] = compute_coherence(E1,E2,t)
 
