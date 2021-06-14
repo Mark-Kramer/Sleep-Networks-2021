@@ -4,11 +4,11 @@
 
 This respository includes an example data set 
 
-`Example_sleep_data.mat`
+[`Example_sleep_data.mat`](Example_sleep_data.mat)
 
 and an example script to analyze these data
 
-`Example_sleep_data_analysis.m`
+[`Example_sleep_data_analysis.m`](Example_sleep_data_analysis.m)
 
 Open the script and run it to implement specific choices for this data analysis pipeline:
 
